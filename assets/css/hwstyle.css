@@ -24,6 +24,11 @@ a {
     text-decoration: none;
 }
 
+.bullets {
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
 #links {
     float: right;
     margin: 2% 10% 0% 0%;
@@ -50,7 +55,7 @@ a {
 }
 #header2 {
     color: teal;
-    padding-bottom: 20px;
+    
 }
 
 #container {
@@ -63,6 +68,14 @@ a {
     position: relative;
     z-index: 10;
     }
+
+#line {
+    background-color: lightgray;
+    height: 3px;
+    margin-bottom: 30px;
+    width: auto;
+}
+
 #image {
     float: left;
     padding-right: 10px;
@@ -84,20 +97,6 @@ a {
     text-align: center;
     width: 190px;
 }
-#bx2 {
-    
-}
-#bx3 {
-    
-}
-
-#bx4 {
-    
-}
-
-#bx5 {
-    
-}
 
 #footer {
     background-color: grey;
@@ -112,4 +111,39 @@ a {
     position: fixed;
     width: 100%;
     z-index: 20;
+}
+ul {
+    list-style-type: none;
+}
+
+.contactlist {
+    margin-bottom: 10px;
+}
+
+#contactform ul{
+    margin-bottom: 20px;
+}
+
+#contactform li{
+    margin-bottom: 10px;
+}
+
+#message {
+    height: 200px;
+}
+
+#name, #email, #message {
+    display: block;
+    width: 95%;
+}
+
+#submitbutton {
+    background-color: teal;
+    color: white;
+    height: 25px;
+    padding: 6px 15px 21px 15px;
+}
+
+#submitbutton:hover {
+    cursor: pointer;
 }
