@@ -73,13 +73,19 @@ a {
     float: left;
     height: 151px;
     margin: 20px;
-    width: 201px;
+    width: 200px;
 }
-#bx1 {
+#bx1, #bx2, #bx3, #bx4, #bx5 {
+    background-color: teal;
+    margin-top: 95px;
+    color: white;
     position: absolute;
+    padding: 5px;
+    text-align: center;
+    width: 190px;
 }
 #bx2 {
-   position: absolute; 
+    
 }
 #bx3 {
     
@@ -100,6 +106,7 @@ a {
     border-top-style: solid;
     border-top-color:teal;
     color: white;
+    left: 0px;
     padding: 20px 0;
     text-align: center;
     position: fixed;
