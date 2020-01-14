@@ -69,6 +69,13 @@ a {
     z-index: 10;
     }
 
+@media only screen and (max-width: 572px) {
+    #container {
+        margin: 175px 0 80px 3%;
+    }
+    
+    }
+
 #line {
     background-color: lightgray;
     height: 3px;
