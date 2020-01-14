@@ -5,11 +5,14 @@
 }
 
 body {
-    background-image: url('../images/pattern.jpg');
+    /* background-image: url('../images/pattern.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
+    background: repeating-linear-gradient(-45deg, transparent, transparent 1em, rgba(127, 215, 245, 0.4) 0, rgba(127, 215, 245, 0.1) 2em, transparent 0, transparent 1em, rgba(127, 215, 245, 0.3) 0, rgba(127, 215, 245, 0.2) 4em, transparent 0, transparent 1em, rgba(192, 235, 250, 0.6) 0, rgba(192, 235, 250, 0.2) 2em), repeating-linear-gradient(45deg, transparent, transparent 1em, rgba(127, 215, 245, 0.4) 0, rgba(127, 215, 245, 0.1) 2em, transparent 0, transparent 1em, rgba(127, 215, 245, 0.3) 0, rgba(127, 215, 245, 0.2) 4em, transparent 0, transparent 1em, rgba(192, 235, 250, 0.4) 0, rgba(192, 235, 250, 0.1) 2em), #FFF;
+    background-blend-mode: multiply;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    height: 100%;
 }
 h1, h2, h3 {
     font-family: 'Georgia', Times, 'Times New Roman', serif;
@@ -155,3 +158,43 @@ ul {
 #submitbutton:hover {
     cursor: pointer;
 }
+
+@mixin pattern($bg-primary,$bg-secondary) {
+    background:
+      repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 1em,
+      rgba($bg-secondary,0.4) 0,
+      rgba($bg-secondary,0.1) 2em,
+      transparent 0,
+      transparent 1em,
+      rgba($bg-secondary,0.3) 0,
+      rgba($bg-secondary,0.2) 4em,
+      transparent 0,
+      transparent 1em,
+      rgba($bg-primary,0.6) 0,
+      rgba($bg-primary,0.2) 2em
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 1em,
+      rgba($bg-secondary,0.4) 0,
+      rgba($bg-secondary,0.1) 2em,
+      transparent 0,
+      transparent 1em,
+      rgba($bg-secondary,0.3) 0,
+      rgba($bg-secondary,0.2) 4em,
+      transparent 0,
+      transparent 1em,
+      rgba($bg-primary,0.4) 0,
+      rgba($bg-primary,0.1) 2em
+    ), #FFF;
+    background-blend-mode: multiply;
+  }
+  
+  html {
+    height: 100%;
+    @include pattern(#c0ebfa, #7FD7F5);
+  }
